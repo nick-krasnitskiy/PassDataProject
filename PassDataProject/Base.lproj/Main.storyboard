@@ -28,7 +28,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjN-GF-0ZL"/>
-                                    <segue destination="Wvh-Dj-OgT" kind="show" id="KZG-Jw-ZEZ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-FV-qrn">
@@ -75,6 +74,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="oh1-96-Zxv" id="7fy-SR-Fcp"/>
                         <outlet property="passwordTextField" destination="2kw-yC-Std" id="Vmi-QR-eCY"/>
+                        <segue destination="Wvh-Dj-OgT" kind="show" identifier="detailSeque" id="uPe-6W-9Lx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
