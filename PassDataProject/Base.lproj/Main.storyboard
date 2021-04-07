@@ -57,6 +57,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="928-ss-zTg">
+                                <rect key="frame" x="177.5" y="609" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.39960498088957569" green="0.57397444220000005" blue="0.49648296941476006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +72,8 @@
                             <constraint firstItem="W8r-VY-BEP" firstAttribute="top" secondItem="Fcr-FV-qrn" secondAttribute="bottom" constant="50" id="K2J-Cq-dy6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fcr-FV-qrn" secondAttribute="trailing" constant="40" id="fxo-gg-Wwt"/>
                             <constraint firstItem="Fcr-FV-qrn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jBx-m0-ir2"/>
+                            <constraint firstItem="928-ss-zTg" firstAttribute="top" secondItem="W8r-VY-BEP" secondAttribute="bottom" constant="20" id="jrK-YD-Ird"/>
+                            <constraint firstItem="928-ss-zTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lzM-1k-5hg"/>
                             <constraint firstAttribute="trailing" secondItem="XP8-YY-dsJ" secondAttribute="trailing" constant="20" id="pZ2-FI-YIg"/>
                             <constraint firstItem="Fcr-FV-qrn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="tVX-ZQ-sNl"/>
                             <constraint firstItem="W8r-VY-BEP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x3c-62-1xq"/>
@@ -74,12 +82,13 @@
                     <connections>
                         <outlet property="loginTextField" destination="oh1-96-Zxv" id="7fy-SR-Fcp"/>
                         <outlet property="passwordTextField" destination="2kw-yC-Std" id="Vmi-QR-eCY"/>
+                        <outlet property="resultLabel" destination="928-ss-zTg" id="Ij5-ki-8Dm"/>
                         <segue destination="Wvh-Dj-OgT" kind="show" identifier="detailSeque" id="uPe-6W-9Lx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="87.5"/>
+            <point key="canvasLocation" x="136.23188405797103" y="87.053571428571431"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="TL5-ri-Whp">
@@ -126,9 +135,11 @@
                     <navigationItem key="navigationItem" id="LrD-zp-idg"/>
                     <connections>
                         <outlet property="label" destination="Ucu-ai-20C" id="u9Q-pL-3Ii"/>
+                        <segue destination="Woz-oY-jsm" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="91J-0q-xjh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jn6-k0-jKP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Woz-oY-jsm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="86.383928571428569"/>
         </scene>

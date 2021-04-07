@@ -11,9 +11,16 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func loginPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "detailSeque", sender: nil)
+    }
+    
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
+        guard segue.identifier == "unwindSegue" else {return}
+        guard let svc = segue.source as? SecondViewController else {return}
+        resultLabel.text = svc.label.text
     }
     
     // Hide keyboard by touch

@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func goBackPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
 
